@@ -7,20 +7,35 @@
         <meta name="description" content="A simple RSS reader for TheStar news website">
         <meta name="author" content="leonlit">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/mobile.css">
     </head>
     <body>
         <noscript>For better experience, please enable javascript in your broweser</noscript>
-        <section>
-            <div>News</div>
-            <div>Business</div>
-            <div>Sport</div>
-            <div>Metro</div>
-            <div>Tech</div>
-            <div>Education</div>
-            <div>Opinion</div>
+        <nav>
+            <div id="navbar">
+                <div id="title">TheStar RSS Reader</div>
+            </div>
+            <div id="nav_items_container">
+                <div>Home</div>
+                <div>News</div>
+                <div>Business</div>
+                <div>Sport</div> 
+                <div>Metro</div>
+                <div>Tech</div>
+                <div>Education</div>
+                <div>Opinion</div>
+            </div>
+        </nav>
+        <section class="news_type_container">
+            <a href="/056200_new/view.php?view=news">News</a>
+            <a href="/056200_new/view.php?view=sport">Sport</a>
+            <a href="/056200_new/view.php?view=metro">Metro</a>
+            <a href="/056200_new/view.php?view=education">Education</a>
+            <a href="/056200_new/view.php?view=businesss">Business</a>
+            <a href="/056200_new/view.php?view=tech">Tech</a>
+            <a href="/056200_new/view.php?view=opinion">Opinion</a>
         </section>
     </body>
 </html>
 
-<script src="" async defer></script>
+<script src="assets/js/index.js" async defer></script>
