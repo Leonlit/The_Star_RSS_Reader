@@ -29,13 +29,13 @@ body {
 }
 
 section {
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     width: 90%;
     margin-left: 5%;
 }
 
 .news_type_container {
-    margin-top: 20vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -51,6 +51,12 @@ section {
     box-shadow: 0px 3px 3px grey;
     cursor: pointer;
     text-decoration: none;
+}
+
+.news_type_container a,
+.news_type_container a:visited,
+.news_type_container a:active {
+    color: blueviolet;
 }
 
 .news_card_section {
@@ -94,7 +100,7 @@ section {
 }
 
 .news_card_special_tags .premium_tag{
-    background-color: gold;
+    background-color: rgb(238, 202, 0);
 }
 
 .news_card_title {

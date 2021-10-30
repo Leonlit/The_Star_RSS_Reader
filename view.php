@@ -1,6 +1,6 @@
 <?php
     $base_url = "https://www.thestar.com.my/rss/";
-    $accepted_views = array("news", "sport", "metro", "education", "businesss", "tech", "opinion");
+    $accepted_views = array("News", "Business", "Sport", "Metro", "Tech", "Education", "Opinion");
     $news_rss = array( "Nation", "Regional", "World", "Environment", "In Other Media", "True Or Not");
     $business_rss = array( "Business News", "SMEBiz");
     $sport_rss = array( "Football", "Golf", "Badminton", "Tennis", "Motorsport");
@@ -26,44 +26,39 @@
         $sub_base = "";
         $temp_arr;
         switch ($view) {
-            case "news":
-                $sub_base = "News";
+            case $accepted_views[0]:
                 $temp_arr = $news_rss;
                 break;
-            case "business":
-                $sub_base = "Business";
+            case $accepted_views[1]:
                 $temp_arr = $business_rss;
                 break;
-            case "sport":
-                $sub_base = "Sport";
+            case $accepted_views[2]:
                 $temp_arr = $sport_rss;
                 break;
-            case "metro":
-                $sub_base = "Metro";
+            case $accepted_views[3]:
                 $temp_arr = $metro_rss;
                 break;
-            case "tech":
-                $sub_base = "Tech";
+            case $accepted_views[4]:
                 $temp_arr = $tech_rss;
                 break;
-            case "education":
-                $sub_base = "Education";
+            case $accepted_views[5]:
                 break;
-            case "opinion":
-                $sub_base = "Opinion";
+            case $accepted_views[6]:
                 $temp_arr = $opinion_rss;
                 break;
             default:
                 //redirect to 404 page
         }
         
-        if (isset($_GET["subCategory"])) {
+        if (isset($_GET["subCategory"]) && $view != "Education") {
             $subCategory = $_GET["subCategory"];
             if (in_array($subCategory, $temp_arr)) {
-                create_section($sub_base, $subCategory);
+                create_section($view, $subCategory);
             }
+        }else if (isset($_GET["subCategory"]) && $view == "Education"){
+            //redirect to 404
         }else {
-            create_section($sub_base, "");
+            create_section($view, "");
         }
     }
     ?>
@@ -81,10 +76,10 @@
         $content = simplexml_load_file($GLOBALS["base_url"].$sub_base."/".$section) or die("Error: Cannot create object");
         echo "<div class='news_card_section'>";
         $items = $content->channel->item;
-        if ($section `!= "") {
+        if ($section != "") {
             echo "<h2>".$section."</h2>";
         }else {
-            echo "<h2>".$section."</h2>";
+            echo "<h2>".$sub_base."</h2>";
         }
         foreach ($items as $container_rss) {
             $premium = $container_rss->premium;
