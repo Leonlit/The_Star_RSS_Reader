@@ -1,0 +1,29 @@
+@media screen and (min-width: 700px) {
+    .news_card {
+        flex-direction: row;
+        width: 70%;
+        margin-left: 10%;
+    }
+
+    .news_card_subsection img{
+        margin-top: 5vh;
+        min-width: 300px;
+    }
+
+    .news_card_section h2 {
+        font-size: 2em;
+        margin-top: 2vh;
+    }
+
+    .news_card_subsection:nth-child(2) {
+        margin-left: 5vw;
+    }
+
+    .news_card_title {
+        margin-top: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}

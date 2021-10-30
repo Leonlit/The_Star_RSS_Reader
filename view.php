@@ -17,6 +17,8 @@
         <meta name="author" content="leonlit">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/mobile.css">
+        <link rel="stylesheet" href="assets/css/tablet.css">
+        <link rel="stylesheet" href="assets/css/desktop.css">
     </head>
     <body>
     <nav>
@@ -146,13 +148,14 @@
 
     function create_section ($sub_base, $section) {
         $content = simplexml_load_file($GLOBALS["base_url"].$sub_base."/".$section) or die("Error: Cannot create object");
-        echo "<div class='news_card_section'>";
-        $items = $content->channel->item;
         if ($section != "") {
             echo "<h2>".$section."</h2>";
         }else {
             echo "<h2>".$sub_base."</h2>";
         }
+        echo "<div class='news_card_section'>";
+        $items = $content->channel->item;
+        
         foreach ($items as $container_rss) {
             $premium = $container_rss->premium;
             $exclusive = $container_rss->isexclusive;
