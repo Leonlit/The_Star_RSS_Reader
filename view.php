@@ -134,6 +134,7 @@
                 }
             }
         ?>
+        <footer>&#169; <a href="https://github.com/Leonlit" target="_blank">Leonlit</a></footer>
     </body>
     <script src="assets/js/index.js" async defer></script>
 </html>
