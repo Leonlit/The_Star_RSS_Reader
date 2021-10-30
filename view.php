@@ -21,9 +21,9 @@
         <link rel="stylesheet" href="assets/css/desktop.css">
     </head>
     <body>
-    <nav>
+        <nav>
+            <div id="title"><a href="./index.html">TheStar RSS Reader</a></div>
             <div id="navbar">
-                <div id="title"><a href="./index.html">TheStar RSS Reader</a></div>
                 <div class="nav_indicator" onclick="open_close_nav()">
                     <div></div>
                     <div></div>
@@ -31,7 +31,6 @@
                 </div>
             </div>
             <div id="nav_items_container">
-                <a href="./index.html">Home</a>
                 <div>
                     <div class="dropdown">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
