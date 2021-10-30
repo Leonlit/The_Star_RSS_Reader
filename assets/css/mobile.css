@@ -59,6 +59,11 @@ section {
     flex-wrap: wrap;
 }
 
+.news_card_section h2 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
 .news_card {
     display: flex;
     flex-direction: column;
@@ -71,9 +76,25 @@ section {
     border-radius: 10px;
 }
 
-.news_card_subsection .news_card_lead{
+.news_card_subsection img{
     width: 100%;
     margin-bottom: 2vh;
+}
+
+.news_card_special_tags {
+    margin-top: 20px;
+}
+
+.news_card_special_tags span {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #0fb145;
+    color: white;
+}
+
+.news_card_special_tags .premium_tag{
+    background-color: gold;
 }
 
 .news_card_title {
@@ -84,7 +105,8 @@ section {
 }
 
 .news_card_description {
-    margin-top: 5vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .news_card_tags {
