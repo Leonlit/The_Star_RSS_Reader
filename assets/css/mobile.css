@@ -9,6 +9,7 @@ body {
 }
 
 #navbar {
+    z-index: 2; /* to prevent triggering the dropdown*/
     background-color: blueviolet;
     position: fixed;
     top:0;
@@ -17,8 +18,85 @@ body {
     height: 60px;
 }
 
+.nav_indicator {
+    float: right;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.nav_indicator div{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 6px;
+}
+
 #nav_items_container {
+    z-index: 1; /* to prevent triggering the dropdown, refer #navbar*/
+    width: 100%;
+    transition: 0.3s;
+    position: fixed;
+    font-size: 1.2em;
+    background-color: rgb(102, 30, 170);
+    top: -100%;
+    padding-top:20px ;
+    padding-bottom:30px;
+    
+}
+
+.dropdown_icon {
+    width: 10px;
+    margin-left: 10px;
+}
+
+#nav_items_container > div,
+#nav_items_container > div > div,
+#nav_items_container div > a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#nav_items_container > a {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#nav_items_container{
+    color: white;
+}
+
+#nav_items_container > div > div:first-child {
+    padding-left: 15px;
+}
+
+#nav_items_container > div a,
+#nav_items_container > div a:visited,
+#nav_items_container > div a:active {
+    background-color: rgb(70, 11, 126);
+    padding-left: 25px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown_content {
     display: none;
+}
+
+#nav_items_container > div:hover a:hover {
+    background-color: rgb(145, 52, 233);
+}
+
+#nav_items_container > div:hover .dropdown_content {
+    display: block;
 }
 
 #title {
@@ -26,6 +104,13 @@ body {
     font-size: 1.5em;
     margin-top: 15px;
     margin-left: 15px;
+}
+
+#title a,
+#title a:visited,
+#title a:active {
+    color: white;
+    text-decoration: none;
 }
 
 section {
@@ -67,7 +152,7 @@ section {
 
 .news_card_section h2 {
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .news_card {

@@ -1,7 +1,7 @@
 <?php
     $base_url = "https://www.thestar.com.my/rss/";
     $accepted_views = array("News", "Business", "Sport", "Metro", "Tech", "Education", "Opinion");
-    $news_rss = array( "Nation", "Regional", "World", "Environment", "In Other Media", "True Or Not");
+    $news_rss = array( "Nation", "Regional", "World", "Environment", "In Other Media", "True Or Not", "Education");
     $business_rss = array( "Business News", "SMEBiz");
     $sport_rss = array( "Football", "Golf", "Badminton", "Tennis", "Motorsport");
     $metro_rss = array( "Metro News", "Eat And Drink", "Focus", "Views");
@@ -19,50 +19,122 @@
         <link rel="stylesheet" href="assets/css/mobile.css">
     </head>
     <body>
-    <?php
-
-    if (isset($_GET["view"])) {
-        $view = $_GET["view"];
-        $sub_base = "";
-        $temp_arr;
-        switch ($view) {
-            case $accepted_views[0]:
-                $temp_arr = $news_rss;
-                break;
-            case $accepted_views[1]:
-                $temp_arr = $business_rss;
-                break;
-            case $accepted_views[2]:
-                $temp_arr = $sport_rss;
-                break;
-            case $accepted_views[3]:
-                $temp_arr = $metro_rss;
-                break;
-            case $accepted_views[4]:
-                $temp_arr = $tech_rss;
-                break;
-            case $accepted_views[5]:
-                break;
-            case $accepted_views[6]:
-                $temp_arr = $opinion_rss;
-                break;
-            default:
-                //redirect to 404 page
-        }
-        
-        if (isset($_GET["subCategory"]) && $view != "Education") {
-            $subCategory = $_GET["subCategory"];
-            if (in_array($subCategory, $temp_arr)) {
-                create_section($view, $subCategory);
+    <nav>
+            <div id="navbar">
+                <div id="title"><a href="./index.html">TheStar RSS Reader</a></div>
+                <div class="nav_indicator" onclick="open_close_nav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="nav_items_container">
+                <a href="./index.html">Home</a>
+                <div>
+                    <div class="dropdown">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=News">News</a>
+                        <a href="view.php?view=News&subCategory=Nation">Nation</a>
+                        <a href="view.php?view=News&subCategory=Regional">Regional</a>
+                        <a href="view.php?view=News&subCategory=World">World</a>
+                        <a href="view.php?view=News&subCategory=Environment">Environment</a>
+                        <a href="view.php?view=News&subCategory=In Other Media">In Other Media</a>
+                        <a href="view.php?view=News&subCategory=True Or Not">True Or Not</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Business<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Business">Business</a>
+                        <a href="view.php?view=Business&subCategory=Business News">Business News</a>
+                        <a href="view.php?view=Business&subCategory=SMEBiz">SMEBiz</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Sport<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Sport">Sport</a>
+                        <a href="view.php?view=Sport&subCategory=Football">Football</a>
+                        <a href="view.php?view=Sport&subCategory=Golf">Golf</a>
+                        <a href="view.php?view=Sport&subCategory=Badminton">Badminton</a>
+                        <a href="view.php?view=Sport&subCategory=Tennis">Tennis</a>
+                        <a href="view.php?view=Sport&subCategory=Motorsport">Motorsport</a>
+                    </div>
+                </div> 
+                <div>
+                    <div class="dropdown">Metro<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Metro">Metro</a>
+                        <a href="view.php?view=Metro&subCategory=Metro News">Metro News</a>
+                        <a href="view.php?view=Metro&subCategory=Eat And Drink">Eat And Drink</a>
+                        <a href="view.php?view=Metro&subCategory=Focus">Focus</a>
+                        <a href="view.php?view=Metro&subCategory=Views">Views</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Tech<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Tech">Tech</a>
+                        <a href="view.php?view=Tech&subCategory=Tech News">Tech News</a>
+                        <a href="view.php?view=Tech&subCategory=Reviews">Reviews</a>
+                        <a href="view.php?view=Tech&subCategory=Games">Games</a>
+                    </div>
+                </div>
+                <a href="view.php?view=News&subCategory=Education">Education</a>
+                <div>
+                    <div class="dropdown">Opinion<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Opinion">Opinion</a>
+                        <a href="view.php?view=Opinion&subCategory=Columnists">Columnists</a>
+                        <a href="view.php?view=Opinion&subCategory=Letters">Letters</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <?php
+            if (isset($_GET["view"])) {
+                $view = $_GET["view"];
+                $sub_base = "";
+                $temp_arr;
+                switch ($view) {
+                    case $accepted_views[0]:
+                        $temp_arr = $news_rss;
+                        break;
+                    case $accepted_views[1]:
+                        $temp_arr = $business_rss;
+                        break;
+                    case $accepted_views[2]:
+                        $temp_arr = $sport_rss;
+                        break;
+                    case $accepted_views[3]:
+                        $temp_arr = $metro_rss;
+                        break;
+                    case $accepted_views[4]:
+                        $temp_arr = $tech_rss;
+                        break;
+                    case $accepted_views[5]:
+                        break;
+                    case $accepted_views[6]:
+                        $temp_arr = $opinion_rss;
+                        break;
+                    default:
+                        //redirect to 404 page
+                }
+                
+                if (isset($_GET["subCategory"])) {
+                    $subCategory = $_GET["subCategory"];
+                    if (in_array($subCategory, $temp_arr)) {
+                        create_section($view, $subCategory);
+                    }else {
+                        //redirect to 404
+                    }
+                }else {
+                    create_section($view, "");
+                }
             }
-        }else if (isset($_GET["subCategory"]) && $view == "Education"){
-            //redirect to 404
-        }else {
-            create_section($view, "");
-        }
-    }
-    ?>
+        ?>
     </body>
+    <script src="assets/js/index.js" async defer></script>
 </html>
 
 <?php

@@ -12,17 +12,74 @@
         <noscript>For better experience, please enable javascript in your broweser</noscript>
         <nav>
             <div id="navbar">
-                <div id="title">TheStar RSS Reader</div>
+                <div id="title"><a href="./index.html">TheStar RSS Reader</a></div>
+                <div class="nav_indicator" onclick="open_close_nav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             <div id="nav_items_container">
-                <div>Home</div>
-                <div>News</div>
-                <div>Business</div>
-                <div>Sport</div> 
-                <div>Metro</div>
-                <div>Tech</div>
-                <div>Education</div>
-                <div>Opinion</div>
+                <a href="./index.html">Home</a>
+                <div>
+                    <div class="dropdown">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=News">News</a>
+                        <a href="view.php?view=News&subCategory=Nation">Nation</a>
+                        <a href="view.php?view=News&subCategory=Regional">Regional</a>
+                        <a href="view.php?view=News&subCategory=World">World</a>
+                        <a href="view.php?view=News&subCategory=Environment">Environment</a>
+                        <a href="view.php?view=News&subCategory=In Other Media">In Other Media</a>
+                        <a href="view.php?view=News&subCategory=True Or Not">True Or Not</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Business<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Business">Business</a>
+                        <a href="view.php?view=Business&subCategory=Business News">Business News</a>
+                        <a href="view.php?view=Business&subCategory=SMEBiz">SMEBiz</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Sport<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Sport">Sport</a>
+                        <a href="view.php?view=Sport&subCategory=Football">Football</a>
+                        <a href="view.php?view=Sport&subCategory=Golf">Golf</a>
+                        <a href="view.php?view=Sport&subCategory=Badminton">Badminton</a>
+                        <a href="view.php?view=Sport&subCategory=Tennis">Tennis</a>
+                        <a href="view.php?view=Sport&subCategory=Motorsport">Motorsport</a>
+                    </div>
+                </div> 
+                <div>
+                    <div class="dropdown">Metro<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Metro">Metro</a>
+                        <a href="view.php?view=Metro&subCategory=Metro News">Metro News</a>
+                        <a href="view.php?view=Metro&subCategory=Eat And Drink">Eat And Drink</a>
+                        <a href="view.php?view=Metro&subCategory=Focus">Focus</a>
+                        <a href="view.php?view=Metro&subCategory=Views">Views</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="dropdown">Tech<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Tech">Tech</a>
+                        <a href="view.php?view=Tech&subCategory=Tech News">Tech News</a>
+                        <a href="view.php?view=Tech&subCategory=Reviews">Reviews</a>
+                        <a href="view.php?view=Tech&subCategory=Games">Games</a>
+                    </div>
+                </div>
+                <a href="view.php?view=News&subCategory=Education">Education</a>
+                <div>
+                    <div class="dropdown">Opinion<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content">
+                        <a href="view.php?view=Opinion">Opinion</a>
+                        <a href="view.php?view=Opinion&subCategory=Columnists">Columnists</a>
+                        <a href="view.php?view=Opinion&subCategory=Letters">Letters</a>
+                    </div>
+                </div>
             </div>
         </nav>
         <section class="news_type_container">
@@ -43,7 +100,6 @@
         <hr>
         <section class="news_type_container">
             <a href="view.php?view=Sport">Sport</a>
-            <a href="view.php?view=Sport&subCategory=">Sport</a>
             <a href="view.php?view=Sport&subCategory=Football">Football</a>
             <a href="view.php?view=Sport&subCategory=Golf">Golf</a>
             <a href="view.php?view=Sport&subCategory=Badminton">Badminton</a>
