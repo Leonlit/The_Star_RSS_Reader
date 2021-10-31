@@ -32,7 +32,7 @@
             </div>
             <div id="nav_items_container">
                 <div>
-                    <div class="dropdown">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-0">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
                         <a href="view.php?view=News">News</a>
                         <a href="view.php?view=News&subCategory=Nation">Nation</a>
@@ -44,15 +44,15 @@
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown">Business<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
-                    <div class="dropdown_content">
+                    <div class="dropdown" id="dropdown_content-1">Business<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown_content" >
                         <a href="view.php?view=Business">Business</a>
                         <a href="view.php?view=Business&subCategory=Business News">Business News</a>
                         <a href="view.php?view=Business&subCategory=SMEBiz">SMEBiz</a>
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown">Sport<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-2">Sport<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
                         <a href="view.php?view=Sport">Sport</a>
                         <a href="view.php?view=Sport&subCategory=Football">Football</a>
@@ -63,7 +63,7 @@
                     </div>
                 </div> 
                 <div>
-                    <div class="dropdown">Metro<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-3">Metro<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
                         <a href="view.php?view=Metro">Metro</a>
                         <a href="view.php?view=Metro&subCategory=Metro News">Metro News</a>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown">Tech<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-4">Tech<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
                         <a href="view.php?view=Tech">Tech</a>
                         <a href="view.php?view=Tech&subCategory=Tech News">Tech News</a>
@@ -83,7 +83,7 @@
                 </div>
                 <a href="view.php?view=News&subCategory=Education">Education</a>
                 <div>
-                    <div class="dropdown">Opinion<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-5">Opinion<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
                         <a href="view.php?view=Opinion">Opinion</a>
                         <a href="view.php?view=Opinion&subCategory=Columnists">Columnists</a>
