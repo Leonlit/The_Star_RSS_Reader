@@ -39,3 +39,29 @@ function remove_other_dropdown_content_view(exceptionEle) {
         }
     }
 }
+
+function limit_news () {
+    const elements = document.getElementById("news_limits");
+    const old_url = window.location.href;
+    const value = elements.options[elements.selectedIndex].value;
+    console.log(value);
+    console.log(old_url);
+
+    last_string = old_url.split("/").filter(n => n);
+    console.log(last_string);
+    if (isNumeric(last_string[last_string.length - 1])) {
+        last_string[last_string.length - 1] = value
+        last_string.shift()
+        last_string.unshift("http:/")
+        console.log(last_string.join("/"));
+        window.location.href = last_string.join("/");
+    }else {
+        last_string.shift();
+        last_string.unshift("http:/");
+        window.location.href = last_string.join("/") + "/" + value
+    }
+}
+
+function isNumeric(value) {
+    return /^\d+$/.test(value);
+}
