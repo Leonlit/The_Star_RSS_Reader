@@ -16,13 +16,13 @@
         <meta name="description" content="A simple RSS reader for TheStar news website">
         <meta name="author" content="leonlit">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/mobile.css">
-        <link rel="stylesheet" href="assets/css/tablet.css">
-        <link rel="stylesheet" href="assets/css/desktop.css">
+        <link rel="stylesheet" href="/assets/css/mobile.css">
+        <link rel="stylesheet" href="/assets/css/tablet.css">
+        <link rel="stylesheet" href="/assets/css/desktop.css">
     </head>
     <body>
         <nav>
-            <div id="title"><a href="./index.html">TheStar RSS Reader</a></div>
+            <div id="title"><a href="/index.html">TheStar RSS Reader</a></div>
             <div id="navbar">
                 <div class="nav_indicator" onclick="open_close_nav()">
                     <div></div>
@@ -32,62 +32,62 @@
             </div>
             <div id="nav_items_container">
                 <div>
-                    <div class="dropdown" id="dropdown_content-0">News<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-0">News<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
-                        <a href="view.php?view=News">News</a>
-                        <a href="view.php?view=News&subCategory=Nation">Nation</a>
-                        <a href="view.php?view=News&subCategory=Regional">Regional</a>
-                        <a href="view.php?view=News&subCategory=World">World</a>
-                        <a href="view.php?view=News&subCategory=Environment">Environment</a>
-                        <a href="view.php?view=News&subCategory=In Other Media">In Other Media</a>
-                        <a href="view.php?view=News&subCategory=True Or Not">True Or Not</a>
+                        <a href="/view/News/Main">News</a>
+                        <a href="/view/News/Nation">Nation</a>
+                        <a href="/view/News/Regional">Regional</a>
+                        <a href="/view/News/World">World</a>
+                        <a href="/view/News/Environment">Environment</a>
+                        <a href="/view/News/In Other Media">In Other Media</a>
+                        <a href="/view/News/True Or Not">True Or Not</a>
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown" id="dropdown_content-1">Business<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-1">Business<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content" >
-                        <a href="view.php?view=Business">Business</a>
-                        <a href="view.php?view=Business&subCategory=Business News">Business News</a>
-                        <a href="view.php?view=Business&subCategory=SMEBiz">SMEBiz</a>
+                        <a href="/view/Business">Business</a>
+                        <a href="/view/Business/Business News">Business News</a>
+                        <a href="/view/Business/SMEBiz">SMEBiz</a>
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown" id="dropdown_content-2">Sport<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-2">Sport<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
-                        <a href="view.php?view=Sport">Sport</a>
-                        <a href="view.php?view=Sport&subCategory=Football">Football</a>
-                        <a href="view.php?view=Sport&subCategory=Golf">Golf</a>
-                        <a href="view.php?view=Sport&subCategory=Badminton">Badminton</a>
-                        <a href="view.php?view=Sport&subCategory=Tennis">Tennis</a>
-                        <a href="view.php?view=Sport&subCategory=Motorsport">Motorsport</a>
+                        <a href="/view/Sport/">Sport</a>
+                        <a href="/view/Sport/Football">Football</a>
+                        <a href="/view/Sport/Golf">Golf</a>
+                        <a href="/view/Sport/Badminton">Badminton</a>
+                        <a href="/view/Sport/Tennis">Tennis</a>
+                        <a href="/view/Sport/Motorsport">Motorsport</a>
                     </div>
                 </div> 
                 <div>
-                    <div class="dropdown" id="dropdown_content-3">Metro<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-3">Metro<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
-                        <a href="view.php?view=Metro">Metro</a>
-                        <a href="view.php?view=Metro&subCategory=Metro News">Metro News</a>
-                        <a href="view.php?view=Metro&subCategory=Eat And Drink">Eat And Drink</a>
-                        <a href="view.php?view=Metro&subCategory=Focus">Focus</a>
-                        <a href="view.php?view=Metro&subCategory=Views">Views</a>
+                        <a href="/view/Metro/">Metro</a>
+                        <a href="/view/Metro/Metro News">Metro News</a>
+                        <a href="/view/Metro/Eat And Drink">Eat And Drink</a>
+                        <a href="/view/Metro/Focus">Focus</a>
+                        <a href="/view/Metro/Views">Views</a>
                     </div>
                 </div>
                 <div>
-                    <div class="dropdown" id="dropdown_content-4">Tech<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-4">Tech<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
-                        <a href="view.php?view=Tech">Tech</a>
-                        <a href="view.php?view=Tech&subCategory=Tech News">Tech News</a>
-                        <a href="view.php?view=Tech&subCategory=Reviews">Reviews</a>
-                        <a href="view.php?view=Tech&subCategory=Games">Games</a>
+                        <a href="/view/Tech/">Tech</a>
+                        <a href="/view/Tech/Tech News">Tech News</a>
+                        <a href="/view/Tech/Reviews">Reviews</a>
+                        <a href="/view/Tech/Games">Games</a>
                     </div>
                 </div>
-                <a href="view.php?view=News&subCategory=Education">Education</a>
+                <a href="/view/News/Education">Education</a>
                 <div>
-                    <div class="dropdown" id="dropdown_content-5">Opinion<img class="dropdown_icon" src="assets/img/triangle.png"/></div>
+                    <div class="dropdown" id="dropdown_content-5">Opinion<img class="dropdown_icon" src="/assets/img/triangle.png"/></div>
                     <div class="dropdown_content">
-                        <a href="view.php?view=Opinion">Opinion</a>
-                        <a href="view.php?view=Opinion&subCategory=Columnists">Columnists</a>
-                        <a href="view.php?view=Opinion&subCategory=Letters">Letters</a>
+                        <a href="/view/Opinion/">Opinion</a>
+                        <a href="/view/Opinion/Columnists">Columnists</a>
+                        <a href="/view/Opinion/Letters">Letters</a>
                     </div>
                 </div>
             </div>
@@ -124,19 +124,23 @@
                 
                 if (isset($_GET["subCategory"])) {
                     $subCategory = $_GET["subCategory"];
-                    if (in_array($subCategory, $temp_arr)) {
-                        create_section($view, $subCategory);
+                    if ($subCategory == "Main") {
+                        create_section($view, "");
                     }else {
-                        //redirect to 404
+                        if (in_array($subCategory, $temp_arr)) {
+                            create_section($view, $subCategory);
+                        }else {
+                            //redirect to 404
+                        }
                     }
                 }else {
-                    create_section($view, "");
+                    //redirect to 404
                 }
             }
         ?>
         <footer>&#169; <a href="https://github.com/Leonlit" target="_blank">Leonlit</a></footer>
     </body>
-    <script src="assets/js/index.js" async defer></script>
+    <script src="/assets/js/index.js" async defer></script>
 </html>
 
 <?php
@@ -155,8 +159,21 @@
         }
         echo "<div class='news_card_section'>";
         $items = $content->channel->item;
-        
+        $counter = 0;
+        $limits = 10;
+
+        if (isset($_GET["limit"])) {
+            if ($_GET["limit"] == 0) {
+                //
+            }
+            $limits =$_GET["limit"];
+        }
+
         foreach ($items as $container_rss) {
+            $counter++;
+            if ($counter > $limits) {
+                break;
+            }
             $premium = $container_rss->premium;
             $exclusive = $container_rss->isexclusive;
             $link = $container_rss->link;

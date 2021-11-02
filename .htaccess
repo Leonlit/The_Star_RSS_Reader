@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+
+ErrorDocument 404 /404.php 
+ErrorDocument 400 /400.php 
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !(/$|\.) 
+RewriteRule (.*) %{REQUEST_URI}/
+
+RewriteRule ^view/(.*)/(.*)/([0-9]+)?/ /view.php?view=$1&subCategory=$2&limit=$3  [NC,L]
+RewriteRule ^view/(.*)/(.*)?/ /view.php?view=$1&subCategory=$2  [NC,L]
