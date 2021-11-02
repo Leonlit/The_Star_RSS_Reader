@@ -133,7 +133,7 @@
                         $temp_arr = $opinion_rss;
                         break;
                     default:
-                        //redirect to 404 page
+                        redirect_404();
                 }
                 
                 if (isset($_GET["subCategory"])) {
@@ -144,11 +144,11 @@
                         if (in_array($subCategory, $temp_arr)) {
                             create_section($view, $subCategory);
                         }else {
-                            //redirect to 404
+                            redirect_404();
                         }
                     }
                 }else {
-                    //redirect to 404
+                    redirect_404();
                 }
             }
         ?>
@@ -178,9 +178,9 @@
 
         if (isset($_GET["limit"])) {
             if ($_GET["limit"] == 0) {
-                //
+                redirect_404();
             }
-            $limits =$_GET["limit"];
+            $limits = $_GET["limit"];
         }
 
         foreach ($items as $container_rss) {
@@ -223,5 +223,9 @@
             ";
         }
         echo "</div>";
+    }
+
+    function redirect_404(){
+        echo "<script> location.replace('/400'); </script>";
     }
 ?>
