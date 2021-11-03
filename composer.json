@@ -1,0 +1,10 @@
+{
+    "name": "vendor/thestar-rssreader",
+    "description": "A simple RSS Reader for TheStar News website",
+    "require": {
+      "php": "^8.0.10"
+    },
+    "require-dev": {
+      "heroku/heroku-buildpack-php": "*"
+    }
+  }
