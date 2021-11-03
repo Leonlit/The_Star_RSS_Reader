@@ -4,17 +4,12 @@ ErrorDocument 404 /404
 ErrorDocument 400 /400
 
 RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R]
 
-RewriteRule ^view/(.*)/(.*)/([0-9]+)?/ /view.php?view=$1&subCategory=$2&limit=$3  [NC,L]
-RewriteRule ^view/(.*)/(.*)?/ /view.php?view=$1&subCategory=$2  [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^view/([^\/]+)/([^\/]+)$ /view.php?view=$1&subCategory=$2
+RewriteRule ^view/([^\/]+)/([^\/]+)/([^\/]+)$ /view.php?view=$1&subCategory=$2&limit=$3

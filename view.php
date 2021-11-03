@@ -134,6 +134,7 @@
                         break;
                     default:
                         redirect_404();
+                        break;
                 }
                 
                 if (isset($_GET["subCategory"])) {
@@ -177,7 +178,7 @@
         $limits = 10;
 
         if (isset($_GET["limit"])) {
-            if ($_GET["limit"] == 0) {
+            if ($_GET["limit"] == 0 || $_GET["limit"] > 10) {
                 redirect_404();
             }
             $limits = $_GET["limit"];

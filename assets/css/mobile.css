@@ -60,6 +60,10 @@ body {
     text-decoration: none;
 }
 
+#nav_items_container > a:hover {
+    text-shadow: 5px 3px 5px black ;
+}
+
 #nav_items_container{
     color: white;
 }
@@ -87,6 +91,10 @@ body {
     cursor: pointer;
 }
 
+.dropdown:hover {
+    text-shadow: 5px 3px 5px black ;
+}
+
 .dropdown_content {
     display: none;
 }
@@ -98,6 +106,31 @@ body {
 
 #nav_items_container > div:hover a:hover {
     background-color: rgb(145, 52, 233);
+}
+
+#news_limits {
+    float: right;
+    margin-right: 15vw;
+    font-size: 1.3em;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 3px 2px grey;
+    cursor: pointer;
+}
+
+#news_limits option {
+    cursor: pointer;
+}
+
+#news_limits:focus {
+    border-color: rgb(145, 52, 233);
+}
+
+#news_limits:focus-visible {
+    outline: none;
 }
 
 #title {
