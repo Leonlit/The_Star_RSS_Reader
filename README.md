@@ -4,4 +4,4 @@ A project for a youtube tutorial on how to deploy a VM server on Oracle cloud an
 
 The playlist:
 
-ttps://www.youtube.com/playlist?list=PLJbvQl3bTiQ9whXQf2m_NQsT6GrYg54V4
+https://www.youtube.com/playlist?list=PLJbvQl3bTiQ9whXQf2m_NQsT6GrYg54V4
